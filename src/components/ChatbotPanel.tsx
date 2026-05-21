@@ -19,7 +19,7 @@ export default function ChatbotPanel({
 }: ChatbotPanelProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
-  const [selectedModel, setSelectedModel] = useState('gemini-3.5-flash');
+  const [selectedModel, setSelectedModel] = useState('gemini-1.5-flash');
   const [isTyping, setIsTyping] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -145,9 +145,9 @@ export default function ChatbotPanel({
               onChange={(e) => setSelectedModel(e.target.value)}
               className="text-xs text-slate-200 bg-transparent border-none outline-none pr-6 font-medium cursor-pointer"
             >
-              <option value="gemini-3.5-flash" className="bg-slate-900 text-slate-200">Gemini 3.5 Flash (Core)</option>
-              <option value="gemini-3.1-flash-lite" className="bg-slate-900 text-slate-200">Gemini 3.1 Flash Lite</option>
-              <option value="gemini-3.1-pro-preview" className="bg-slate-900 text-slate-200">Gemini 3.1 Pro (Preview)</option>
+              <option value="gemini-1.5-flash" className="bg-slate-900 text-slate-200">Gemini 1.5 Flash</option>
+              <option value="gemini-1.5-pro" className="bg-slate-900 text-slate-200">Gemini 1.5 Pro</option>
+              <option value="gemini-2.0-flash" className="bg-slate-900 text-slate-200">Gemini 2.0 Flash</option>
             </select>
           </div>
 

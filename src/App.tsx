@@ -269,9 +269,9 @@ export default function App() {
                     className="text-[10px] text-slate-300 bg-transparent border-none outline-none w-full font-mono cursor-pointer"
                   >
                     <option value="all">Any Model</option>
-                    <option value="gemini-3.5-flash">gemini-3.5-flash</option>
-                    <option value="gemini-3.1-flash-lite">gemini-3.1-lite</option>
-                    <option value="gemini-3.1-pro-preview">gemini-3.1-pro</option>
+                    <option value="gemini-1.5-flash">gemini-1.5-flash</option>
+                    <option value="gemini-1.5-pro">gemini-1.5-pro</option>
+                    <option value="gemini-2.0-flash">gemini-2.0-flash</option>
                     <option value="unsupported-hyper-neural-net-9">unsupported-hyper-net</option>
                   </select>
                 </div>

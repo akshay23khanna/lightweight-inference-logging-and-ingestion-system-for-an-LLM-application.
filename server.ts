@@ -50,7 +50,7 @@ async function startServer() {
       try {
         reply = await sdk.chatWithLogging({
           conversationId,
-          model: model || 'gemini-3.5-flash',
+          model: model || 'gemini-1.5-flash',
           prompt,
           history: historyFormatted,
           systemInstruction: 'You are an intelligent engineering assistant helper configured to explain LLM system internals.'

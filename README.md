@@ -105,7 +105,7 @@ Request body:
 {
   "conversationId": "session_abc123",
   "prompt": "Explain inference logging",
-  "model": "gemini-3.5-flash"
+  "model": "gemini-1.5-flash"
 }
 ```
 

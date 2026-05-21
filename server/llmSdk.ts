@@ -108,7 +108,7 @@ export class LlmLoggerSdk {
     let promptTokens = 0;
     let completionTokens = 0;
 
-    const selectedModel = inputs.model || 'gemini-3.5-flash';
+    const selectedModel = inputs.model || 'gemini-1.5-flash';
 
     try {
       const client = getAiClient();
