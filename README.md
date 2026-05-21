@@ -21,6 +21,7 @@ Source code: [akshay23khanna/lightweight-inference-logging-and-ingestion-system-
 
 - Frontend: React 19, Vite, Tailwind CSS, lucide-react
 - Backend: Node.js, Express, TypeScript
+- Deployment API: Vercel serverless functions in `api/`
 - LLM Provider: Google Gemini via `@google/genai`
 - Storage: Local JSON file at `data/db.json`
 
@@ -70,6 +71,8 @@ APP_URL="http://localhost:3000"
 ```
 
 `GEMINI_API_KEY` is required for live LLM responses. `APP_URL` is used by the SDK to send logs to the ingestion endpoint. If omitted, it defaults to `http://localhost:3000`.
+
+For Vercel deployments, add `GEMINI_API_KEY` in Project Settings > Environment Variables. The `api/` directory provides Vercel serverless versions of the chat, ingestion, logs, messages, sessions, stats, and clear endpoints.
 
 3. Start the development server:
 
@@ -198,6 +201,7 @@ Log transmission is asynchronous, so the user-facing chat request is not delayed
 ## Tradeoffs
 
 - JSON-file storage keeps the demo easy to run with no external services, but it is not suitable for high-concurrency production workloads.
+- Vercel serverless endpoints use warm-instance memory for demo telemetry, so data can reset across cold starts. A hosted production version should use a managed database.
 - The SDK currently supports Google Gemini only. The UI offers multiple Gemini model names, but not multiple providers.
 - Logging is near real time and asynchronous, but there is no durable retry queue.
 - Input/output previews are truncated, but there is no full PII redaction pipeline.
