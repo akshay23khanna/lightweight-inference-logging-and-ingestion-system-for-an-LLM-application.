@@ -1,0 +1,6 @@
+{
+  "name": "LLM Inference Logger and Ingestion",
+  "description": "A lightweight inference logging, ingestion, and chatbot visualization dashboard system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
