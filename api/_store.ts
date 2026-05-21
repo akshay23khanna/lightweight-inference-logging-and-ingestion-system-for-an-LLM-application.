@@ -1,5 +1,3 @@
-import { GoogleGenAI } from '@google/genai';
-
 type Role = 'user' | 'model';
 type Status = 'success' | 'error';
 
@@ -185,6 +183,7 @@ export async function runGeminiChat(input: {
       throw new Error('GEMINI_API_KEY is not configured in the deployment environment.');
     }
 
+    const { GoogleGenAI } = await import('@google/genai');
     const client = new GoogleGenAI({ apiKey });
     const contents = [
       ...input.history.map(message => ({
